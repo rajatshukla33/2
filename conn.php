@@ -17,10 +17,10 @@ try {
  ?>
 */
 <?php
-$servername = "us-cdbr-east-02.cleardb.com";
-$username = "b72ef57090ca66";
-$password = "708d1cd0";
-$db   = "heroku_fcd20689d46b3ac";
+$servername = "vrk7xcrab1wsx4r1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com";
+$username = "u8ja13onqqtl7vd6";
+$password = "zvoa5die2xzaicw6";
+$db   = "e86pfr6st0rbwyyh";
 
 // Create connection
 $conn = new mysqli($servername,$db, $username, $password);
