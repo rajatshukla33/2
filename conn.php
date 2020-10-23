@@ -4,8 +4,9 @@ $host = "remotemysql.com";
 $user = "X8ozUyo9ED";
 $pass = "xZv0XXr2NT";
 $db   = "X8ozUyo9ED";
+$charset="utf8mb4";
 //$conn = null;
-$dsn="mysql:host=$host;dbname:$db;charset=$charset";
+$dsn="mysql:host=$host;dbname=$db;charset=$charset";
 try
 {
   $pdo=new($dsn,$user,$pass);
