@@ -1,12 +1,25 @@
 <?php 
 
-$host = "us-cdbr-east-02.cleardb.com";
-$user = "b72ef57090ca66";
-$pass = "708d1cd0";
-$db   = "heroku_fcd20689d46b3ac";
+$host = "remotemysql.com";
+$user = "X8ozUyo9ED";
+$pass = "xZv0XXr2NT";
+$db   = "X8ozUyo9ED";
 //$conn = null;
+$dsn="mysql:host=$host;dbname:$db;charset=$charset";
+try
+{
+  $pdo=new($dsn,$user,$pass);
+  $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+}
+catch(PDOException $e)
+{
+  throw new PDOExceptiom($e->getMessage());}
+require_once=crud.php;
+$crud=new crud($pdo);
 
 
+
+/*
 try {
   $conn = new PDO("mysql:$user,$pass,host={$host};dbname={$db};");
 } catch (Exception $e) {
@@ -28,7 +41,7 @@ $conn = new mysqli($servername,$db, $username, $password);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
-}
+}*/
 echo "Connected successfully";
 ?>
 */
